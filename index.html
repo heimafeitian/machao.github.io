@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>国旅深圳 - 旅游线路展示</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: "微软雅黑", sans-serif;}
+    body {background: #f8f8f8;}
+    .banner {width: 100%; height: auto;}
+    .activity {background: #ff3300; color: white; text-align: center; padding: 10px; font-size: 18px; font-weight: bold;}
+    .container {max-width: 1200px; margin: 0 auto; padding: 20px;}
+    h1 {color: #333; margin-bottom: 20px; text-align: center;}
+    .category {background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .category h2 {color: #007bff; margin-bottom: 10px;}
+    .product-list {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+    .product-item {background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .product-name {font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;}
+    .product-price {font-size: 22px; color: #ff3300; font-weight: bold; margin-bottom: 15px;}
+    .contact-section {background: white; padding: 25px; border-radius: 8px; margin: 30px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;}
+    .contact-item {margin: 15px 0;}
+    .contact-label {font-size: 16px; color: #666; margin-bottom: 5px; display: block;}
+    .contact-value {font-size: 20px; font-weight: bold; color: #333;}
+    .wechat-qrcode {width: 200px; height: 200px; margin: 10px auto; border: 1px solid #eee;}
+    .call-btn {background: #007bff; color: white; border: none; padding: 12px 25px; font-size: 18px; border-radius: 50px; cursor: pointer; margin-top: 10px; text-decoration: none; display: inline-block;}
+    .warning {background: #fff3cd; color: #856404; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; font-weight: bold;}
+    .footer {text-align: center; padding: 20px; color: #666; font-size: 14px;}
+    /* 响应式适配手机 */
+    @media (max-width: 768px) {
+      .product-list {grid-template-columns: 1fr;}
+      .contact-value {font-size: 18px;}
+      .call-btn {width: 80%; padding: 15px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部Banner图（替换成你的旅游宣传图） -->
+  <img class="banner" src="https://picsum.photos/id/1036/1200/400" alt="港珠澳大桥旅游">
+  
+  <!-- 活动横幅 -->
+  <div class="activity">🔥 凡提前报名港澳游 免费安排入住公司酒店一晚 🔥</div>
+
+  <div class="container">
+    <h1>国旅（深圳）热门旅游线路</h1>
+
+    <!-- 一日游分类 -->
+    <div class="category">
+      <h2>一日游线路</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <div class="product-name">深圳经典一日游</div>
+          <div class="product-price">80元/人</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">深中通道/港珠澳大桥/珠海一日游</div>
+          <div class="product-price">268元/人</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">香港观光一日游</div>
+          <div class="product-price">188元/人</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">澳门观光一日游</div>
+          <div class="product-price">198元/人</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 港澳多日游 -->
+    <div class="category">
+      <h2>港澳多日游</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <div class="product-name">香港+澳门双卧4天3晚</div>
+          <div class="product-price">1380元/人起</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">香港+澳门高铁3天2晚</div>
+          <div class="product-price">1580元/人起</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 长线游 -->
+    <div class="category">
+      <h2>长线旅游线路</h2>
+      <div class="product-list">
+        <div class="product-item">
+          <div class="product-name">云南昆明大理丽江6天5晚</div>
+          <div class="product-price">2380元/人起</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">海南三亚5天4晚</div>
+          <div class="product-price">1980元/人起</div>
+        </div>
+        <div class="product-item">
+          <div class="product-name">北京天津双卧7天6晚</div>
+          <div class="product-price">2180元/人起</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 联系我们 -->
+    <div class="contact-section">
+      <h2>📞 立即联系我们</h2>
+      <div class="contact-item">
+        <div class="contact-label">联系电话（马先生）</div>
+        <div class="contact-value">13028826501</div>
+        <a href="tel:13028826501" class="call-btn">一键拨打</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">微信咨询（扫码添加）</div>
+        <img class="wechat-qrcode" src="https://picsum.photos/id/237/200/200" alt="微信二维码">
+        <div class="contact-value">长按二维码保存添加</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">公司地址</div>
+        <div class="contact-value">深圳市罗湖区国贸营业部</div>
+      </div>
+    </div>
+
+    <!-- 温馨提示 -->
+    <div class="warning">⚠️ 重要提示：游客必须自备港澳通行证方可参团</div>
+
+    <div class="footer">
+      © 2026 国旅（深圳）国际旅行社 | 许可证号：L-GD-GJ00198
+    </div>
+  </div>
+</body>
+</html>
